@@ -1,14 +1,14 @@
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
+  $(document).ready(function() {                            // Jquery 
+    $("#target1").css("color", "red");                      //cambia color palabras
+    $("#target1").prop("disabled", true);                   //desabilita boton en este caso y si se coloca enabled se habilita
     $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
+    $("#target2").appendTo("#right-well");                  //mueve el objeto al lado derecho
+    $("#target5").clone().appendTo("#left-well");           //clona el objeto y se coloca en el lado izquierdo
+    $("#target1").parent().css("background-color", "red");  //cambia el color del fondo, objeto padre
+    $("#right-well").children().css("color", "orange");     //cambia el color de las letras, objeto hijo
     $("#left-well").children().css("color", "green");
-    $(".target:nth-child(2)").addClass("animated bounce");
+    $(".target:nth-child(2)").addClass("animated bounce");  //agrega la clase "animated bounce" en todos los objetos hijos pero en la posicion 2
     $(".target:even").addClass("animated shake");
 
   });
